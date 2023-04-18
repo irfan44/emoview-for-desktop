@@ -1,0 +1,63 @@
+{
+  "name": "emoview-for-desktop",
+  "version": "1.5.0",
+  "description": "Emoview for Desktop is a part of Emoview apps which shows the emotion of students during an online learning session",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron-forge start",
+    "package": "electron-forge package",
+    "make": "electron-forge make"
+  },
+  "config": {
+    "forge": {
+      "packagerConfig": {},
+      "makers": [
+        {
+          "name": "@electron-forge/maker-squirrel",
+          "config": {
+            "name": "emoview_for_desktop"
+          }
+        },
+        {
+          "name": "@electron-forge/maker-dmg",
+          "config": {
+            "name": "emoview_for_desktop"
+          }
+        },
+        {
+          "name": "@electron-forge/maker-zip",
+          "platforms": [
+            "darwin"
+          ]
+        },
+        {
+          "name": "@electron-forge/maker-deb",
+          "config": {}
+        },
+        {
+          "name": "@electron-forge/maker-rpm",
+          "config": {}
+        }
+      ]
+    }
+  },
+  "keywords": [],
+  "author": "Irfan Nurghiffari Muhajir <irfannmuhajir@upi.edu>",
+  "license": "MIT",
+  "devDependencies": {
+    "@electron-forge/cli": "^6.1.1",
+    "@electron-forge/maker-base": "^6.1.1",
+    "@electron-forge/maker-deb": "^6.1.1",
+    "@electron-forge/maker-dmg": "^6.1.1",
+    "@electron-forge/maker-rpm": "^6.1.1",
+    "@electron-forge/maker-squirrel": "^6.1.1",
+    "@electron-forge/maker-zip": "^6.1.1",
+    "electron": "^19.0.8"
+  },
+  "dependencies": {
+    "axios": "^0.27.2",
+    "electron-squirrel-startup": "^1.0.0",
+    "jwt-decode": "^3.1.2",
+    "keytar": "^7.9.0"
+  }
+}
