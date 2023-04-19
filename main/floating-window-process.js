@@ -21,7 +21,7 @@ function createFloatingWindow(width, id, accessToken) {
   });
 
   win.loadURL(
-    `https://emoview-v15.vercel.app/in-meeting-display?id=${id}&accessToken=${accessToken}`
+    `https://emoview-v2.vercel.app/in-meeting-display?id=${id}&accessToken=${accessToken}`
   );
 
   win.on("closed", () => {

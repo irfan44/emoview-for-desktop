@@ -18,7 +18,7 @@ function createAppWindow() {
     autoHideMenuBar: true,
   });
 
-  win.loadURL("https://emoview-v15.vercel.app");
+  win.loadURL("https://emoview-v2.vercel.app");
 
   win.webContents.setWindowOpenHandler(({ url }) => {
     if (url.startsWith("https://")) shell.openExternal(url);
@@ -26,7 +26,7 @@ function createAppWindow() {
   });
 
   win.webContents.on("did-fail-load", () => {
-    win.loadURL("https://emoview-v15.vercel.app");
+    win.loadURL("https://emoview-v2.vercel.app");
   });
 
   win.on("closed", () => {
